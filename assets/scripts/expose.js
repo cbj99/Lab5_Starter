@@ -9,6 +9,7 @@ function init() {
   //console.log(example);
 
   let soundPart = document.querySelector("[class='hidden']");
+  soundPart.volume = 0.5;
   //console.log(soundPart.volume);
 
   let hornType = document.getElementById('horn-select');
