@@ -59,15 +59,17 @@ function talk(faceChange,inputText,voiceSelect) {
 
   synth.speak(utterThis);
 
-  setInterval(function () {
+  let facecheck = setInterval(function () {
     if(synth.speaking){
       faceChange.src = 'assets/images/smiling-open.png';
     }else{
       faceChange.src = 'assets/images/smiling.png';
-      clearInterval();
+      clearInterval(facecheck);
     }
+    //console.log(1);
   }, 0);
 
+  
   
 
 }
